@@ -3,17 +3,40 @@
  * Do not include SCSS code in this file.
  */
 
+@import "01_utilities/mixins";
+@import "01_utilities/variables";
+@import "01_utilities/functions";
+@import "01_utilities/dependencies";
+
+@layer base, vendors, layout, components, pages, state;
+
  /**
  * Import dependencies
  */
-@use "dependencies";
 
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
 
- @use "layouts/home";
+@import "./02_base/reset.scss" layer(base);
+@import "./03_vendors/bootstrap-custom.scss" layer(vendors);
+
+// @import "./04_layout/footer.scss" layer(layout);
+// @import "./04_layout/header.scss" layer(layout);
+@import "./04_layout/ponentes.scss" layer(layout);
+
+@import "./05_components/c-navbar.scss" layer(components);
+@import "./05_components/c-ponente-card.scss" layer(components);
+@import "./05_components/c-slider.scss" layer(components);
+@import "./05_components/c-articulos-card.scss" layer(components);
+
+
+@import "./06_pages/p-home.scss" layer(pages);
+@import "./06_pages/p-articulos.scss" layer(pages);
+@import "./06_pages/p-agenda.scss" layer(pages);
+
+// @import "./07_states/_active.scss" layer(state); finalmente no se uso esta capa
 
 /**
  * Do NOT include anything else in this file!

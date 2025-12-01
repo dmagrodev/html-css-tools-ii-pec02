@@ -1,0 +1,71 @@
+@use "sass:color";
+@use "../01_utilities/functions" as func;
+@import "../03_vendors/bootstrap-custom";
+
+@layer components {
+
+    .navbar {
+        z-index: 3000;
+        background-color: $light; 
+        border-bottom: func.rem(2) solid $primary;
+    }
+
+    .navbar-brand {
+        font-family: $font-family-serif;
+        color: $dark;
+    }
+
+    .navbar-brand__text{
+        font-size: larger;
+        color: $primary;
+        &::first-letter{
+            font-weight: 800;
+        }
+    }
+
+    .navbar-brand__logo {
+        width: func.rem(80); 
+        height: func.rem(80);
+        object-fit: contain; 
+        transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; 
+        
+        &:hover { 
+            filter: drop-shadow(0 0 func.rem(8) $primary);
+            transform: scale(1.05); 
+        }
+    }
+
+    .nav-link {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem; 
+        font-size: $font-size-base;
+        color: $dark;
+
+        &:hover {
+            color: $primary; 
+            border-bottom: func.rem(1) solid $primary;
+        }
+
+        &.active { 
+            font-weight: bold;
+            color: $primary;
+        }
+    }
+
+
+    .dropdown-menu {
+        background-color: $light;
+        border: func.rem(1) solid $primary;
+
+    }
+
+    .dropdown-item {
+        background-color: $primary;
+        &:hover {
+            background-color: $primary;
+        }
+        &:active{
+            background-color: $primary;
+        }
+    }
+}

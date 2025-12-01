@@ -1,0 +1,8 @@
+@use "sass:color";
+@use "../01_utilities/functions" as *;
+//variables UOC-BOILER PLATE
+
+$uoc-corporate: #000078;
+$uoc-masterbrand: #73edff;
+$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+// $mqMinWidth: rem(420);

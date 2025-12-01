@@ -1,0 +1,193 @@
+@use "sass:color";
+@use "../01_utilities/variables" as *;
+@use "../01_utilities/mixins" as *;
+@use "../01_utilities/functions" as func;
+@import "../03_vendors/bootstrap-custom";
+
+@layer components {
+    
+    .c-articulo-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        background-color: $white;
+        border: func.rem(1) solid $dark;
+        border-radius: $border-radius-lg; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            box-shadow: $box-shadow-lg;
+            transform: translateY(func.rem(-5));
+        }
+    }
+
+    .c-articulo-card__image {
+        width: 100%;
+        height: func.rem(200);
+        object-fit: cover;
+        border-bottom: func.rem(1) solid $dark; 
+    }
+
+    .c-articulo-card__content {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        padding: $card-spacer-x; 
+    }
+
+    .c-articulo-card__title {
+        @include font-size($font-size-lg);
+        margin-bottom: 0.5rem;
+        font-family: $font-family-serif;
+        font-weight: $font-weight-bold;
+        color: $dark;
+    }
+
+    .c-articulo-card__summary {
+        flex-grow: 1;
+        margin-bottom: 1rem; 
+        color: $dark;
+    }
+
+    .c-articulo-card__tag {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        margin-bottom: 1rem;
+        font-weight: $font-weight-semibold;
+        color: $white;
+        background-color: $danger;
+        border-radius: $border-radius-pill;
+        @include font-size($font-size-sm);
+    }
+    
+    .c-articulo-card__tag:has(.c-articulo-card__tag--opinion),
+    .c-articulo-card__tag:has(.c-articulo-card__tag--new),
+    .c-articulo-card__tag:has(.c-articulo-card__tag--hot) {
+        padding: 0; 
+        margin-bottom: 1rem; 
+        background-color: transparent;
+    }
+    
+    %c-articulo-card.c-articulo-card__tag--hot {
+        color:whitesmoke; 
+        background-color: $danger;
+    }
+
+    .c-articulo-card__tag--new { 
+        color:whitesmoke;
+        background-color: $success;
+    }
+
+    .c-articulo-card__tag--opinion {
+        color:whitesmoke;
+        background-color: $info;
+    }
+
+    .c-articulo-card__read-more {
+        align-self: flex-start;
+        margin-top: 1rem;
+    }
+        
+    .c-articulo-card__author {
+        margin-top: 0.5rem;
+        font-size: $font-size-sm;
+        color: $dark;
+    }
+
+
+    // -------------------//
+    //Selectores avanzados//
+    // -------------------//
+
+    .c-articulo-card:has(.c-articulo-card--no-image) {
+        color: $white;
+        background-color: $dark;
+        border: func.rem(4) solid $primary;
+
+        :is(.c-articulo-card__title, .c-articulo-card__summary, .c-articulo-card__author-name) {
+            color: $white
+        }
+        .c-articulo-card__tag {
+             border: func.rem(1) solid $white;
+        }
+
+    }
+
+    .c-articulo-card:has(.c-articulo-card__author) {
+        background-color: color.adjust($secondary, $lightness: 75%);
+    }
+
+    :is(.c-articulo-card--featured, .c-articulo-card:has(.c-articulo-card__tag--hot)) {
+        border-color: $danger;
+        border-width: func.rem(4);
+        box-shadow: $box-shadow-sm;
+    }
+
+    :where(.c-article-card__content) {
+        p {
+            padding-bottom: 0.1rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+    }
+
+    .c-articulo-card--dark-theme,
+    .c-articulo-card:has(.c-articulo-card--no-image),
+    .c-articulo-card:has(.c-articulo-card__tag--new)
+      {
+        background-color: $dark;
+        border-color: $secondary;
+        box-shadow: 0 0 func.rem(15) rgba($secondary, 0.6); 
+
+
+        :is(.c-articulo-card__title, .c-articulo-card__summary, .c-articulo-card__author-name, .c-articulo-card__author) {
+            color: $white;
+        }
+    }
+
+
+       @include media-breakpoint-down(sm) {
+
+        .c-articulo-list__row-fix {
+            min-width: 100%;
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .c-articulo-card {
+             min-width: unset; 
+        }
+
+        .c-articulo-card__image {
+            height: func.rem(200);
+        }
+    }
+
+
+    // Tablet y Escritorio (sm - 576px)
+    @include media-breakpoint-up(sm) {
+        .c-articulo-card {
+             min-width: func.rem(280); 
+        }
+
+        .c-articulo-card__image {
+            height: func.rem(250);
+        }
+    }
+
+    // Escritorio Mediano (md - 768px)
+    @include media-breakpoint-up(md) {
+        .c-articulo-card {
+             min-width: unset; 
+        }
+    
+        .c-articulo-card__image {
+            height: func.rem(220); 
+        }
+    }
+
+
+}
+
+

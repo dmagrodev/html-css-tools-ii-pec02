@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>Slow Fire 2025</title>
+  </head>
+
+  <body class="p-agenda"> 
+      <include src="./views/header.html" id = "inicio"></include>
+
+      <main>
+        <section class="p-agenda">
+          <div class="">
+            <h1 class="display-3 text-center font-family-serif agenda-header__title">SLOW FIRE 2025 </h1>
+            <h2 class="display-2 text-white text-center font-family-serif">Jornadas Gastronomicas </h1>
+            <p class="lead text-secondary">Consulta el programa y reserva tu plaza para el evento principal.</p>
+          </div>
+        <!-- botonera, collapsable Bootstrap -->
+        <div class="row g-3 justify-content-center mb-4">
+            <div class="col-12 col-md-5">
+                <button class="btn btn-outline-light btn-toggle-view w-100 collapsed" type="button" 
+                        data-bs-toggle="collapse" data-bs-target="#AgendaCollapse" 
+                        aria-expanded="false" aria-controls="AgendaCollapse">
+                    <i class="fas fa-calendar-alt me-2"></i> Ver Programa de Ponentes
+                </button>
+            </div>
+            <div class="col-12 col-md-5">
+                <button class="btn btn-outline-light btn-primary btn-toggle-view w-100" type="button" 
+                        data-bs-toggle="collapse" data-bs-target="#ReservaCollapse" 
+                        aria-expanded="true" aria-controls="ReservaCollapse">
+                    <i class="fas fa-ticket-alt me-2"></i> Reservar Mi Plaza
+                </button>
+            </div>
+        </div>
+        <!--  collapsables relativos a la botonera -->
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <div id="MainCollapseContainer">
+                    
+                    <!-- 2. SECCIÓN DE RESERVA (Abierta por defecto) -->
+                    <div class="collapse show" id="ReservaCollapse" data-bs-parent="#MainCollapseContainer">
+                        <div class="content-area">
+                            <h2 class="text-primary mb-4">Reserva tú Plaza</h2>
+                            
+                            <form id="reservationForm" class="row g-3 needs-validation" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                                
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, introduce tu nombre.
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, introduce un email válido.
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <label for="plazas" class="form-label">Número de Plazas</label>
+                                    <select class="form-select" id="plazas" name="plazas" required>
+                                        <option value="" disabled selected>Selecciona...</option>
+                                        <option value="1">1 Plaza</option>
+                                        <option value="2">2 Plazas</option>
+                                        <option value="3">3 Plazas</option>
+                                        <option value="4">4 Plazas (Máx.)</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Selecciona la cantidad de plazas.
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-8">
+                                    <label for="paquete" class="form-label">Paquete de Jornadas</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paquete" id="paquete_completo" value="completo" required>
+                                        <label class="form-check-label" for="paquete_completo">
+                                            Completo (2 Días - 13 y 14 Dic) - €50
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paquete" id="paquete_viernes" value="viernes" required>
+                                        <label class="form-check-label" for="paquete_viernes">
+                                            Solo Viernes 13 Dic - €30
+                                        </label>
+                                    </div>
+                                    <div class="invalid-feedback d-block">
+                                        Debes seleccionar un paquete.
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="terminos" required>
+                                        <label class="form-check-label" for="terminos">
+                                            Acepto los <a href="#" class="text-primary text-decoration-none" data-bs-toggle="modal" data-bs-target="#staticBackdrop">términos y condiciones</a>.
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Debes aceptar los términos y condiciones.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12 mt-4">
+                                    <button id="formSubmitBtn" class="btn btn-lg w-100 btn-primary" type="submit" >
+                                        Confirmar y Pagar
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- 3. SECCIÓN DE AGENDA (Cerrada por defecto) -->
+                    <div class="collapse" id="AgendaCollapse" data-bs-parent="#MainCollapseContainer">
+                        <div class="content-area">
+                            <h2 class="text-primary mb-4">Programa Detallado: Madrid</h2>
+                            
+                            <!-- Acordeón para los días del evento -->
+                            <div class="accordion" id="AgendaAcordeon">
+                                
+                                <!-- DÍA 1: VIERNES 13 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <i class="fas fa-sun me-2"></i> Viernes, 13 de Diciembre: Cocina Ancestral y Fusión
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#AgendaAcordeon">
+                                        <div class="accordion-body">
+                                            <div class="timeline-item">
+                                                <strong>10:00 - 10:30</strong>: Apertura y Bienvenida. *Presentación del evento y ponentes.*
+                                            </div>
+                                            <div class="timeline-item">
+                                                <strong>10:30 - 12:00</strong>: Ponencia Magistral: **Alberto Ruíz** (Chef invitado). "El tiempo perfecto: Liderando el Cocido de Madrid."
+                                            </div>
+                                            <div class="timeline-item">
+                                                <strong>12:00 - 13:30</strong>: Demostración en Vivo: *Técnicas de Brasa para Caza Mayor*.
+                                            </div>
+                                            <div class="timeline-item">
+                                                <strong>13:30 - 15:00</strong>: Almuerzo (Networking y Cata de Platos Tradicionales).
+                                            </div>
+                                            <div class="timeline-item">
+                                                <strong>15:00 - 16:30</strong>: Taller Interactivo: *Maridaje de Vinos de la Tierra con Carnes Ahumadas*.
+                                            </div>
+                                            <div class="timeline-item">
+                                                <strong>16:30 - 18:00</strong>: Mesa Redonda: *El futuro de la cocina lenta en la alta gastronomía*.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- DÍA 2: SÁBADO 14 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <i class="fas fa-cloud-sun me-2"></i> Sábado, 14 de Diciembre: Repostería y Cierre
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#AgendaAcordeon">
+                                        <div class="accordion-body">
+                                            <div class="timeline-item">
+                                                <strong>10:00 - 11:30</strong>: Ponencia: **Laura Díaz** (Pastelera Experta). "Reinventando el postre clásico sin perder la esencia."
+                                            </div>
+                                            <div class="timeline-item">
+                                                <strong>11:30 - 13:00</strong>: Masterclass: *Uso de ingredientes de proximidad en la panadería*.
+                                            </div>
+                                            <div class="timeline-item">
+                                                <strong>13:00 - 14:00</strong>: Ceremonia de Clausura y Entrega de Diplomas.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="mt-4 text-center">El programa está sujeto a cambios. Consulte siempre la web oficial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section> 
+
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Terminos y Condiciones</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <include src="./views/terminos.html"></include>    
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </main>
+
+      <include src="./views/footer.html"></include>
+</body>
+<script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</html>

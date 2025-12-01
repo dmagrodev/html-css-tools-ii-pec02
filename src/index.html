@@ -1,27 +1,220 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>Slow Fire 2025</title>
   </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+
+  <body class="p-home"> 
+      <include src="./views/header.html" id = "inicio"></include>
+       <main>
+        
+        <section class="p-home__poster">
+            <div class="hero__title"><span class="hero__title--initial">S</span>LOW <span class="hero__title--initial">F</span>IRE</div>
+            <div class="hero__subtitle">Jornadas Gastronómicas 2025</div>
+            
+            <p class="hero__description">
+                SLOW FIRE, a fuego lento, es el punto de encuentro de la alta cocina con la tradición, el fuego lento y la brasa. 
+                Esta jornada se adentra en el corazón de la gastronomía ancestral, explorando platos típicos y fusionandolos con las nuevas técnicas contemporáneas. 
+                Contaremos con ponentes de excepción, como el aclamado chef Pedro Fernandez, ganador del premio al Mejor Cocido de Madrid, quien compartirá 
+                sus secretos sobre los tiempos de cocción perfectos.<br>
+                Además, dedicaremos una sección especial a la repostería tradicional, 
+                debatiendo cómo los postres de toda la vida se reinventan en la cocina actual, manteniendo la esencia del sabor auténtico.
+            </p>
+
+            <div class="hero__image-area">
+              <div class="slider-section">
+                <div class="slider">
+                    <div class="slider__track">
+                        <div class="slider__slide slider__slide--active">
+                            <img src="./assets/images/f-portada-04.jpg" alt="Plato de alta cocina con fuego lento" class="slider__image">
+                        </div>
+                        <div class="slider__slide ">
+                           <img src="./assets/images/f-portada-03.jpg" alt="Plato de alta cocina con fuego lento" class="slider__image">
+                        </div>
+                      </div>
+                      <button class="slider__btn slider__btn--prev" aria-label="Foto anterior">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                      </button>
+                      <button class="slider__btn slider__btn--next" aria-label="Foto siguiente">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                      </button>
+                    <div class="slider__dots">
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__dates text-center">
+                <span class="d-block display-5 font-family-serif">13 & 14</span>
+                <span class="d-block lead">DICIEMBRE</span>
+            </div>
+            
+            <div class="hero__action">
+                 <a href="inscripcion.html" class="btn btn-primary btn-lg w-100 shadow" role="button">
+                    Reserva tú Plaza
+                 </a>
+
+            </div>
+            
+        </section>
+
+        <div class="container my-5">
+            <section class="mb-5">
+                <h2 class="text-center mb-4 display-5 text-primary">Próximos Eventos</h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="text-bg-primary p-3 border rounded shadow-sm h-100 text-center">
+                        <a class="text-light text-decoration-none w-300 " data-bs-toggle="collapse" href="#nextEventCollapse1" role="button" aria-expanded="false" aria-controls="nextEventCollapse1">Madrid Palacio Cibeles</a>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="p-3 border rounded shadow-sm h-100 text-center">
+                        <a class="text-primary text-decoration-none w-100 " data-bs-toggle="collapse" href="#nextEventCollapse2" role="button" aria-expanded="false" aria-controls="nextEventCollapse2">Toledo - Centro Cultural</a>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="p-3 border rounded shadow-sm h-100 text-center">
+                        <a class="text-primary text-decoration-none w-100 " data-bs-toggle="collapse" href="#nextEventCollapse3" role="button" aria-expanded="false" aria-controls="nextEventCollapse3">Jerez - IFECA</a>
+                      </div>
+                    </div>
+                </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="collapse multi-collapse" id="nextEventCollapse1">
+                        <div class="card card-body">
+                          <div class="row">
+                            <div class="col  map-responsive">
+                              <iframe class="map-responsive__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2535.244044887582!2d-3.694624324849961!3d40.418892055509076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42289b5b19565f%3A0x2dcaa85f4558b7cb!2sPalacio%20de%20Cibeles%2C%20Retiro%2C%2028014%20Madrid!5e1!3m2!1sen!2ses!4v1764025020718!5m2!1sen!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="col">
+                              <a class="map-responsive__link text-primary" href="https://maps.app.goo.gl/kFG2S7SDqA4hbgFN6"><i class="fas fa-location-dot me-2 "></i>Direccion</a>
+                              <p class="mb-3 ps-1">
+                                  PLAZA DE CIBELES, 1 <br> 28014 MADRID
+                              </p>
+                              <h6 class="fw-semibold mb-1">Zona / Referencia</h6>
+                              <p class="mb-4 ps-4">
+                                  En el corazón del Paseo del Prado, frente a la Fuente de Cibeles y junto al Banco de España.
+                              </p>
+
+                              <h5 class="fw-bold mb-3">
+                                  <i class="fas fa-route me-2"></i> Opciones de Transporte Público
+                              </h5>
+                              <ul class="list-unstyled ps-4">
+                                  <li class="mb-2">
+                                      <i class="fas fa-subway me-2 text-info"></i>
+                                      <span class="fw-semibold">Metro:</span>
+                                      Estación <span class="badge bg-danger text-white">Banco de España</span> (Línea 2). A menos de 5 minutos a pie.
+                                  </li>
+                                  <li class="mb-2">
+                                      <i class="fas fa-bus me-2 text-warning"></i>
+                                      <span class="fw-semibold">Autobús (EMT):</span>
+                                      Múltiples líneas con parada en Cibeles (Líneas 1, 2, 5, 9, 10, 14, 15, 20, 27, 34, 37, 45, 51, 52, 53, 74, 146, 150, 203, N1-N27).
+                                  </li>
+                                  <li>
+                                      <i class="fas fa-train me-2 text-success"></i>
+                                      <span class="fw-semibold">Cercanías:</span>
+                                      Estación <span class="badge bg-success text-white">Recoletos</span> (C-1, C-2, C-7, C-8, C-10). A unos 10-15 minutos a pie.
+                                  </li>
+                              </ul>
+                              <div class="alert alert-secondary mt-3 p-2 d-flex align-items-center" role="alert">
+                                  <i class="fas fa-walking me-2"></i>
+                                  <small class="fw-bold">Recomendación:</small>
+                                  <small class="ms-1">Dada su centralidad, la mejor opción es el Metro o Bus. Evita el coche si es posible, ya que es zona de tráfico restringido (Zona de Bajas Emisiones - ZBE).</small>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="collapse multi-collapse" id="nextEventCollapse2">
+                        <div class="card card-body">
+                          <div class="row">
+                            <div class="col map-responsive">
+                              <iframe class="map-responsive__iframe"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5112.587212621671!2d-4.030693919433323!3d39.85705981613602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6a0ba6f08236e5%3A0x4c12a33ca82422f5!2sCentro%20Cultural%20San%20Marcos!5e1!3m2!1sen!2ses!4v1764025899244!5m2!1sen!2ses"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="col">
+                              <a class="map-responsive__link text-primary" href="https://maps.app.goo.gl/FbnYUCG3x3CpYTiG6"><i class="fas fa-location-dot me-2 "></i>Direccion</a>
+                              <p class="mb-3 ps-4">
+                                  CALLE TRINIDAD, 10 <br> 45002 TOLEDO
+                              </p>
+
+                              <h6 class="fw-semibold mb-1">Zona / Casco Histórico</h6>
+                              <p class="mb-4 ps-4">
+                                  Centro Histórico de Toledo, junto a la Plaza de Zocodover.
+                              </p>
+                              <h5 class="fw-bold mb-3">
+                                    <i class="fas fa-bus-simple me-2"></i> Recomendaciones de Transporte
+                              </h5>
+                              <ul class="list-unstyled ps-4">
+                                  <li class="mb-1">
+                                      <i class="fas fa-shoe-prints me-2 text-success"></i>
+                                      <span class="fw-semibold">Lo más recomendable:</span> El acceso en coche es limitado. Se sugiere aparcar en zonas cercanas (como el parking de Corralillo de San Miguel o el de Recaredo) y <span class="fw-bold">acceder a pie</span>.
+                                  </li>
+                                  <li>
+                                      <i class="fas fa-bus me-2 text-warning"></i>
+                                      <span class="fw-semibold">Bus Urbano:</span> Parada más cercana en Plaza de Zocodover (a 5 minutos a pie). Líneas 5, 6, 12, etc.
+                                  </li>
+                              </ul>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    <div class="col">
+                      <div class="collapse multi-collapse" id="nextEventCollapse3">
+                        <div class="card card-body">
+                          <div class="row">
+                            <div class="col map-responsive">
+                            <iframe class="map-responsive__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.9334139512034!2d-6.140783977674781!3d36.700417452546546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dc6c4b9ed95d5%3A0x80ec5ccdb8ec4aa3!2sIFECA-%20Palacio%20de%20exposiciones%20Lola%20Flores!5e1!3m2!1sen!2ses!4v1764026798773!5m2!1sen!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="col">
+                              <a class="map-responsive__link text-primary" href="https://maps.app.goo.gl/NuK4QT15dv74nBPm9"><i class="fas fa-location-dot me-2 "></i>Direccion</a>
+                              <p class="mb-3 ps-4">
+                                AVENIDA DE LA UNIVERSIDAD, S/N <br> 11405 JEREZ DE LA FRONTERA (CÁDIZ)
+                              </p>
+                              <h6 class="fw-semibold mb-1">Zona / Referencia</h6>
+                              <p class="mb-4 ps-4">
+                                  Ubicado junto a la Universidad de Cádiz (Campus de Jerez) y cerca del Parque González Hontoria.
+                              </p>
+                              <h5 class="fw-bold mb-3">
+                                  <i class="fas fa-road me-2"></i> Acceso y Transporte
+                              </h5>
+                              <ul class="list-unstyled ps-4">
+                                  <li class="mb-1">
+                                      <i class="fas fa-car-side me-2 text-secondary"></i>
+                                      <span class="fw-semibold">Acceso por carretera:</span> Muy buen acceso desde la A-4, A-382 (Arcos) y la A-480 (Chipiona). Dispone de amplio aparcamiento exterior.
+                                  </li>
+                                  <li class="mb-1">
+                                      <i class="fas fa-train me-2 text-danger"></i>
+                                      <span class="fw-semibold">Estación de Tren:</span> La estación de tren y autobuses de Jerez está a unos 15-20 minutos a pie o un corto trayecto en taxi/bus.
+                                  </li>
+                                  <li>
+                                      <i class="fas fa-bus me-2 text-warning"></i>
+                                      <span class="fw-semibold">Bus Urbano:</span> Líneas de autobús urbano (Línea 1, 8, etc.) con parada cercana en la zona de la Universidad.
+                                  </li>
+                              </ul>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </section> 
+        </div>
+    </main>
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
+
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 </html>

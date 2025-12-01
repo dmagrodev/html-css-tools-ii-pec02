@@ -1,0 +1,73 @@
+//@use "~bootstrap/scss/bootstrap";
+@use "sass:color";
+@use "../01_utilities/functions" as *;
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+
+//paleta de colores
+$color-terracotta: #A84938;
+$color-olive: #9eae65;
+$color-cream: #F5F0E6;
+$color-charcoal: #333333;
+
+// Mapeo de colores personalizados con los nombres de Bootstrap
+$primary: $color-terracotta;
+$secondary: $color-olive;
+$light: $color-cream; 
+$dark: $color-charcoal;
+
+//colores de estado 
+$success:#4CAF50;
+$danger:#F44336;
+$warning:#FFC107;
+
+//recreo el mapa de colores de bootstrap
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "light": $light,
+  "dark": $dark,
+  "success": $success,
+  "danger": $danger,
+  "warning": $warning
+);
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+$font-family-serif: "Georgia", "Times New Roman", serif;
+$font-family-base: $font-family-serif;
+$font-size-base:   1.05rem;
+
+// ----------------------------------------------------
+// 4. PERSONALIZACIÓN DE COMPONENTES
+// ----------------------------------------------------
+
+//Tarjetas (Card) 
+$card-border-width: rem(2);
+$card-border-radius: 0.15rem;
+$card-spacer-y: 1.5rem;
+
+//Botones
+$btn-padding-y: 0.6rem;
+$btn-padding-x: 1.5rem;
+
+//Navbar
+$navbar-light-color: $color-charcoal;
+$navbar-light-hover-color: $color-terracotta;
+
+//Bordes/Formularios
+$border-radius: 0.25rem;
+$enable-shadows: true;
+
+//Drop-Down
+$dropdown-link-hover-color: $primary;
+$dropdown-link-active-color: $primary;
+$dropdown-link-active-bg: $light;
+// $dropdown-bg: $light;
+
+// ----------------------------------------------------
+// 5. IMPORTAR VARIABLES DE BOOTSTRAP
+// ----------------------------------------------------
+@import "~bootstrap/scss/bootstrap";

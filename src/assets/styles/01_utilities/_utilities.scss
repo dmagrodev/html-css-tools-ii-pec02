@@ -1,0 +1,10 @@
+@use "variables" as *;
+@use "../03_vendors/bootstrap-custom" as *;
+
+.u-color-primary {
+    color: $primary;
+}
+
+.u-color-secondary {
+    color: $secondary;
+}

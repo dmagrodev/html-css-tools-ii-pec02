@@ -1,0 +1,24 @@
+@use "../01_utilities/variables" as *;
+@use "../01_utilities/mixins" as *;
+@use "../03_vendors/bootstrap-custom" as *;
+@use "../05_components/c-articulos-card";
+@use "../01_utilities/functions" as func;
+
+@layer pages {
+
+.p-articulos {
+    
+    .container {
+        max-width: func.rem(1400);
+    }
+
+    section.row {
+        @include media-breakpoint-up(xl) {
+            .col {
+                @include make-col(3); 
+            }
+        }
+    }
+
+}
+}

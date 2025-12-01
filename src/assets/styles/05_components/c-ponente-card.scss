@@ -1,0 +1,56 @@
+@use "../01_utilities/functions" as *;
+@import "../03_vendors/bootstrap-custom";
+
+@layer components {
+    .ponente-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+        background-color: dvar(--bs-white);
+        border: rem(2) solid var(--bs-light); 
+
+        &:hover {
+            box-shadow: $dark;
+            transform: translateY(rem(-5)); 
+        }
+
+        &--destacado{
+            background-color: $light;
+            border-color: $warning;
+            box-shadow: 0 0 rem(10) rgba(255, 193, 7, 0.8);
+    }
+    }
+
+    .ponente-card__image{
+        display: block;
+        width: rem(120);
+        height: rem(120);
+        margin: 0 auto 1.2rem;
+        object-fit: cover;
+        border: rem(3) solid var(--bs-primary);
+        border-radius: 50%;
+    } 
+
+    .ponente-card__name{
+        margin-bottom: 0.3rem;
+        font-size: 1.4rem;
+        color: var(--bs-dark);
+    }
+
+    .ponente-card__title{
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        font-style: italic;
+        color: var(--bs-secondary);
+    }
+    
+    .ponente-card__bio{
+        flex-grow: 1;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+        color: #666;
+    }
+
+}

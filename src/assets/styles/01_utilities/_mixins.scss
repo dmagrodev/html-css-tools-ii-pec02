@@ -1,0 +1,22 @@
+@use "../01_utilities/functions" as *;
+@use "sass:map";
+
+$breakpoints: (
+    "sm": rem(576),  // Small devices
+    "md": rem(768),  // Medium devices
+    "lg": rem(992),  // Large devices
+    "xl": rem(1200)  // Extra large devices
+);
+
+
+@mixin media-down($breakpoint){
+    @if map.has-key($breakpoints, $breakpoint ){
+        $breakpoint-value: map.get($breakpoints, $breakpoint);
+        @media (max-width: $breakpoint-value){
+            @content;
+        }
+    }
+    @else{
+        @warn "beakpoint no existe"
+    }
+};

@@ -1,0 +1,28 @@
+@import "../01_utilities/mixins"; // se ha tenido que traer aqui, por que desde main.scss no lo toma 
+
+@layer layout {
+
+    .l-grid-ponentes{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .l-grid-ponentes .ponente-card {
+        $gap-size: 1.5rem;
+        width: calc(33.333% - (#{$gap-size} * 2 / 3));
+    }
+
+    @include media-down(md){
+        .l-grid-ponentes .ponente-card {
+             $gap-size: 1.5rem;
+             width: calc(50% - (#{$gap-size} / 2));
+        }
+    }
+
+    @include media-down(sm){
+        .l-grid-ponentes .ponente-card {
+             width: 100%;
+        }
+    }
+}

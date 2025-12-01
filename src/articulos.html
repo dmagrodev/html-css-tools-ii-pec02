@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+        <title>Slow Fire 2025</title>
+    </head>
+
+    <body class="p-articulos">
+        
+        <include src="./views/header.html" id = "inicio"></include>
+
+        <main>
+            <div class="container my-5 c-articulo-list__row-fix">
+                <h1 class="display-4 text-primary text-center mb-5 fw-bold">Artículos</h1>
+
+
+                <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-0 gy-4 g-md-4 c-articulo-list__row-fix">
+                    
+                    <div class="col">
+                        <article class="c-articulo-card ">
+                            <img src="./assets/images/comida-01-sm.jpg" alt="Imagen de un cocido tradicional" class="c-articulo-card__image">
+                            <div class="c-articulo-card__content">
+                                <span class="c-articulo-card__tag c-articulo-card__tag--hot">Tradición</span>
+                                <p class="c-articulo-card__title">El Secreto del Cocido</p>
+                                <p class="c-articulo-card__summary">Descubre los tiempos de cocción y los ingredientes esenciales que convierten un simple plato en una obra maestra...</p>
+                                <a href="#" class="c-articulo-card__read-more btn btn-sm btn-primary">Leer Artículo</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="c-articulo-card">
+                            <img src="./assets/images/articulo_02.jpg" alt="Postre reinventado" class="c-articulo-card__image">
+                            <div class="c-articulo-card__content">
+                                <span class="c-articulo-card__tag c-articulo-card__tag--new">Repostería</span>
+                                <p class="c-articulo-card__title">De la Abuela al Siglo XXI: Postres Reinventados</p>
+                                <p class="c-articulo-card__summary">Cómo la repostería clásica se fusiona con técnicas modernas sin perder la esencia del sabor auténtico. </p>
+                                <p class="c-articulo-card__author">Autor: <span class="c-articulo-card__author-name">Pedro Jimenez</span></p>
+                            </div>
+                        </article>
+                    </div>
+
+
+                    <div class="col">
+                        <article class="c-articulo-card c-articulo-card--no-image">
+                            <div class="c-articulo-card__content">
+                                <div class="c-articulo-card__tag">
+                                    <span class="c-articulo-card__tag c-articulo-card__tag--opinion">Opinión</span>
+                                    <span class="c-articulo-card__tag c-articulo-card__tag--new">New</span>
+                                </div>
+                                <p class="c-articulo-card__title">Sostenibilidad en la Parrilla</p>
+                                <p class="c-articulo-card__summary">Un debate sobre la procedencia de la leña y el impacto ambiental de las cocinas basadas en el fuego. ¿Es la brasa sostenible?</p>
+                                <a href="#" class="c-articulo-card__read-more btn btn-sm btn-outline-light">Leer Artículo</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="c-articulo-card">
+                            <img src="./assets/images/articulo_04.jpg" alt="Primer plano de brasa de encina" class="c-articulo-card__image">
+                            <div class="c-articulo-card__content">
+                                <span class="c-articulo-card__tag">Técnica</span>
+                                <p class="c-articulo-card__title">Dominando las Brasas</p>
+                                <p class="c-articulo-card__summary">Temperaturas, tipos de madera y el arte de las cenizas. El curso maestro para parrilleros avanzados.</p>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="col">
+                        <article class="c-articulo-card">
+                            <img src="./assets/images/articulo_05.jpg" alt="Copa de vino junto a un plato" class="c-articulo-card__image">
+                            <div class="c-articulo-card__content">
+                                <span class="c-articulo-card__tag c-articulo-card__tag--opinion">Maridaje</span>
+                                <p class="c-articulo-card__title">Vinos de Jerez</p>
+                                <p class="c-articulo-card__summary">La guía definitiva para maridar platos ahumados con los mejores vinos finos y amontillados de la región de Cádiz.</p>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="col">
+                        <article class="c-articulo-card">
+                            <img src="./assets/images/articulo_06.jpg" alt="Plato vegano de verduras a la brasa" class="c-articulo-card__image">
+                            <div class="c-articulo-card__content">
+                                <span class="c-articulo-card__tag">Tendencias</span>
+                                <p class="c-articulo-card__title">Vegetales a la Brasa: Más Allá de la Carne</p>
+                                <p class="c-articulo-card__summary">Las técnicas para caramelizar verduras y darles el sabor ahumado perfecto en una dieta plant-based.</p>
+                                <a href="#" class="c-articulo-card__read-more btn btn-sm btn-outline-secondary">Leer Artículo</a>
+                            </div>
+                        </article>
+                    </div>
+
+                </section>
+            </div>
+        </main>
+
+        <include src="./views/footer.html"></include>
+    </body>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</html>

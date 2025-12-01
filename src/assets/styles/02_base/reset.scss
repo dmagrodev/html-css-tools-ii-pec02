@@ -1,0 +1,49 @@
+@use "../01_utilities/functions" as *;
+@import "../03_vendors/bootstrap-custom";
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:focus-visible {
+    outline: rem(3) solid #{$primary};
+    outline-offset: rem(2);
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+    outline: none; 
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+::selection { 
+    color: #{$dark};
+    background: #{$secondary}; 
+}
