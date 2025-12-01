@@ -44,8 +44,8 @@
                         <div class="content-area">
                             <h2 class="text-primary mb-4">Reserva tú Plaza</h2>
                             
-                            <form id="reservationForm" class="row g-3 needs-validation" name="book-slow-fire" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
-                                
+                            <form id="reservationForm" class="row g-3 needs-validation" name="book-slow-fire" method="POST" data-netlify="true"  action="./success.html">
+                                <input type="hidden" name="form-name" value="book-slow-fire" />
                                 <div class="col-md-6">
                                     <label for="nombre" class="form-label">Nombre Completo</label>
                                     <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -109,22 +109,20 @@
                                 
                                 <div class="col-12 mt-4">
                                     <button id="formSubmitBtn" class="btn btn-lg w-100 btn-primary" type="submit" >
-                                        Confirmar y Pagar
+                                        Confirmar
                                     </button>
                                 </div>
                             </form>
                         </div>
                     </div>
                     
-                    <!-- 3. SECCIÓN DE AGENDA (Cerrada por defecto) -->
+
                     <div class="collapse" id="AgendaCollapse" data-bs-parent="#MainCollapseContainer">
                         <div class="content-area">
                             <h2 class="text-primary mb-4">Programa Detallado: Madrid</h2>
                             
-                            <!-- Acordeón para los días del evento -->
                             <div class="accordion" id="AgendaAcordeon">
                                 
-                                <!-- DÍA 1: VIERNES 13 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -155,7 +153,6 @@
                                     </div>
                                 </div>
                                 
-                                <!-- DÍA 2: SÁBADO 14 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
