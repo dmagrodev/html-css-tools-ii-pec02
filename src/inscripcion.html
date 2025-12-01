@@ -19,7 +19,7 @@
             <h2 class="display-2 text-white text-center font-family-serif">Jornadas Gastronomicas </h1>
             <p class="lead text-secondary">Consulta el programa y reserva tu plaza para el evento principal.</p>
           </div>
-        <!-- botonera, collapsable Bootstrap -->
+
         <div class="row g-3 justify-content-center mb-4">
             <div class="col-12 col-md-5">
                 <button class="btn btn-outline-light btn-toggle-view w-100 collapsed" type="button" 
@@ -36,17 +36,15 @@
                 </button>
             </div>
         </div>
-        <!--  collapsables relativos a la botonera -->
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
                 <div id="MainCollapseContainer">
                     
-                    <!-- 2. SECCIÓN DE RESERVA (Abierta por defecto) -->
                     <div class="collapse show" id="ReservaCollapse" data-bs-parent="#MainCollapseContainer">
                         <div class="content-area">
                             <h2 class="text-primary mb-4">Reserva tú Plaza</h2>
                             
-                            <form id="reservationForm" class="row g-3 needs-validation" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                            <form id="reservationForm" class="row g-3 needs-validation" name="book-slow-fire" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
                                 
                                 <div class="col-md-6">
                                     <label for="nombre" class="form-label">Nombre Completo</label>
