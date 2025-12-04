@@ -1,0 +1,25 @@
+@use "../01_utilities/variables" as *;
+@use "../01_utilities/mixins" as *;
+@use "../01_utilities/functions" as func;
+@use "sass:color";
+@import "../03_vendors/bootstrap-custom";
+
+@layer pages {
+
+    .p-success{
+        min-height: 80vh;
+    }
+
+    .p-success__card{
+            max-width: func.rem(600); 
+            padding: 2rem;
+        }
+
+    .p-success__list{
+        max-width: func.rem(350);
+    }
+    
+    .p-success__icon{
+        font-size: 4rem;
+    }
+}

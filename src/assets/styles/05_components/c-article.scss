@@ -72,13 +72,13 @@
     }
 
     .c-media-frame:has(.c-media-frame__image + .c-media-frame__caption) {
+        max-height: func.rem(450);
         padding: 0.5rem;
         color: $white;
         background-color: $dark;
         border-radius: 0.5rem;
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         transition: transform 0.3s ease;
-        max-height: func.rem(450);
     }
     
 
