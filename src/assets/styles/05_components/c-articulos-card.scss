@@ -147,7 +147,7 @@
     }
 
 
-       @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(sm) {
 
         .c-articulo-list__row-fix {
             min-width: 100%;
@@ -165,7 +165,7 @@
     }
 
 
-    // Tablet y Escritorio (sm - 576px)
+    // Tablet y Escritorio
     @include media-breakpoint-up(sm) {
         .c-articulo-card {
              min-width: func.rem(280); 
@@ -176,7 +176,7 @@
         }
     }
 
-    // Escritorio Mediano (md - 768px)
+    // Escritorio Mediano
     @include media-breakpoint-up(md) {
         .c-articulo-card {
              min-width: unset; 

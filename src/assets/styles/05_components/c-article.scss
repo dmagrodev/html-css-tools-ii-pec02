@@ -1,0 +1,91 @@
+@use "sass:color";
+@use "../01_utilities/variables" as *;
+@use "../01_utilities/mixins" as *;
+@use "../01_utilities/functions" as func;
+@import "../03_vendors/bootstrap-custom";
+
+@layer components {
+    
+    .c-article-detail {
+        display: block;
+        max-width: func.rem(900);
+        padding: 1rem 1rem;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: #ffffff;
+        border-radius: 0.5rem;
+        box-shadow: 0 func.rem(10) func.rem(20) rgba(0, 0, 0, 0.5);
+    }
+
+    .c-article-detail__header {
+        padding-bottom: 1rem;
+        margin-bottom: 3rem;
+        border-bottom: func.rem(1) solid $light; 
+    }
+
+    .c-article-detail__meta {
+        font-style: italic;
+    }
+
+    .c-article-content {
+        color: $dark;
+    }
+
+    .c-article-content :is(blockquote, ul, ol) {
+        padding-left: 1.5rem;
+        margin-left: 0rem;
+        color: $dark;
+        border-left: func.rem(5) solid hwb(340 10% 30%); 
+    }
+
+    .c-article-content blockquote {
+        padding: 1rem 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.6;
+        background-color: lch(90.19% 8.67 185 / 0.883);
+        border-radius: 0.5rem;
+    }
+
+    .c-article-content__list-title {
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+    }
+
+    .c-article-content__list-item {
+        padding-left: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .c-article-content__list-item-lead {
+        margin-right: 0.25rem;
+        font-weight: 700;
+        color: hwb(340 10% 30%); 
+    }
+
+
+    .c-media-frame {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .c-media-frame:has(.c-media-frame__image + .c-media-frame__caption) {
+        padding: 0.5rem;
+        color: $white;
+        background-color: $dark;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+        max-height: func.rem(450);
+    }
+    
+
+    .c-media-frame__caption {
+        padding-top: 0.5rem;
+        font-size: 0.875rem;
+        color: #6c757d;
+        text-align: center;
+    }
+}

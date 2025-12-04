@@ -2,6 +2,7 @@
 @import "../03_vendors/bootstrap-custom";
 
 @layer components {
+    
     .ponente-card {
         display: flex;
         flex-direction: column;
@@ -20,7 +21,7 @@
             background-color: $light;
             border-color: $warning;
             box-shadow: 0 0 rem(10) rgba(255, 193, 7, 0.8);
-    }
+        }
     }
 
     .ponente-card__image{
@@ -45,7 +46,7 @@
         font-style: italic;
         color: var(--bs-secondary);
     }
-    
+
     .ponente-card__bio{
         flex-grow: 1;
         margin-bottom: 1.5rem;

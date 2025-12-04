@@ -20,21 +20,25 @@
  */
 
 @import "./02_base/reset.scss" layer(base);
-@import "./03_vendors/bootstrap-custom.scss" layer(vendors);
 
-// @import "./04_layout/footer.scss" layer(layout);
-// @import "./04_layout/header.scss" layer(layout);
+@import "./03_vendors/bootstrap-custom.scss" layer(vendors);
+@import "./03_vendors/font-awesome-custom.scss" layer(vendors);
+
 @import "./04_layout/ponentes.scss" layer(layout);
+@import "./04_layout/footer.scss" layer(layout);
 
 @import "./05_components/c-navbar.scss" layer(components);
 @import "./05_components/c-ponente-card.scss" layer(components);
 @import "./05_components/c-slider.scss" layer(components);
+@import "./05_components/c-article.scss" layer(components);
 @import "./05_components/c-articulos-card.scss" layer(components);
-
 
 @import "./06_pages/p-home.scss" layer(pages);
 @import "./06_pages/p-articulos.scss" layer(pages);
 @import "./06_pages/p-agenda.scss" layer(pages);
+
+// @import "./04_layout/footer.scss" layer(layout);
+// @import "./04_layout/header.scss" layer(layout);
 
 // @import "./07_states/_active.scss" layer(state); finalmente no se uso esta capa
 

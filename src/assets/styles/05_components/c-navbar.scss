@@ -28,7 +28,7 @@
         height: func.rem(80);
         object-fit: contain; 
         transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; 
-        
+
         &:hover { 
             filter: drop-shadow(0 0 func.rem(8) $primary);
             transform: scale(1.05); 

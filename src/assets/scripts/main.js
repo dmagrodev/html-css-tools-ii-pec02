@@ -144,11 +144,8 @@ const initApp = () => {
 
     (() => {
 		'use strict';
-
-		// Recoge todos los formularios a los que se aplicarán estilos de validación de Bootstrap
 		const forms = document.querySelectorAll('.needs-validation');
-
-		// Itera sobre ellos y previene el envío si no son válidos
+        
 		Array.from(forms).forEach(form => {
 			form.addEventListener('submit', event => {
 				if (!form.checkValidity()) {
