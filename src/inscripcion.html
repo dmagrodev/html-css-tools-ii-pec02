@@ -46,7 +46,7 @@
                         <div class="content-area">
                             <h2 class="text-primary mb-4">Reserva tú Plaza</h2>
                             
-                            <form id="reservationForm" class="row g-3 needs-validation" name="book-slow-fire" method="POST" data-netlify="true"  action="/success.html">
+                            <form id="reservationForm" class="row g-3 needs-validation" name="book-slow-fire" method="POST" data-netlify-recaptcha="true" data-netlify="true"  action="./success.html">
                                 <input type="hidden" name="form-name" value="book-slow-fire" />
                                 <div class="col-md-6">
                                     <label for="nombre" class="form-label">Nombre Completo</label>
@@ -108,7 +108,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+                                <div data-netlify-recaptcha="true"></div>
                                 <div class="col-12 mt-4">
                                     <button id="formSubmitBtn" class="btn btn-lg w-100 btn-primary" type="submit" >
                                         Confirmar
