@@ -24,8 +24,8 @@
 @import "./03_vendors/bootstrap-custom.scss" layer(vendors);
 @import "./03_vendors/font-awesome-custom.scss" layer(vendors);
 
-@import "./04_layout/ponentes.scss" layer(layout);
-@import "./04_layout/footer.scss" layer(layout);
+@import "./04_layout/l-ponentes.scss" layer(layout);
+@import "./04_layout/l-footer.scss" layer(layout);
 
 @import "./05_components/c-navbar.scss" layer(components);
 @import "./05_components/c-ponente-card.scss" layer(components);
