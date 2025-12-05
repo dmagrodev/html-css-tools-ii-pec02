@@ -8,17 +8,17 @@
 
 .p-articulos {
     
-    .container {
-        max-width: func.rem(1400);
-    }
+        .container {
+            max-width: func.rem(1400);
+        }
 
-    section.row {
-        @include media-breakpoint-up(xl) {
-            .col {
-                @include make-col(3); 
+        section.row {
+            @include media-breakpoint-up(xl) {
+                .col {
+                    @include make-col(3); 
+                }
             }
         }
-    }
 
-}
+    }
 }

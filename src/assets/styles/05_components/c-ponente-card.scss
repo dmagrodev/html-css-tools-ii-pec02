@@ -11,7 +11,7 @@
         text-align: center;
         background-color: dvar(--bs-white);
         border: rem(2) solid var(--bs-light); 
-
+        height: 100%;
         &:hover {
             box-shadow: $dark;
             transform: translateY(rem(-5)); 

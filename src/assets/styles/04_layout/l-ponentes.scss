@@ -1,0 +1,27 @@
+@use "../01_utilities/mixins" as *; // se ha tenido que traer aqui, por que desde main.scss no lo toma 
+
+@layer layout {
+
+    .l-grid-ponentes{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    
+    }
+
+    .l-grid-ponentes__item { 
+        flex: 0 0 calc(33.333% - (1.5rem * 2 / 3)); /* 3 columna */
+    }
+
+    @include media-down(lg){
+        .l-grid-ponentes__item {
+           flex: 0 0 calc(50% - (1.5rem / 2)); /* 2 columna */
+        }
+    }
+
+    @include media-down(sm){ 
+        .l-grid-ponentes__item {
+            flex: 0 0 100%;  /* 1 columna */
+        }
+    }
+}
