@@ -6,6 +6,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 1.5rem;
+<<<<<<< HEAD
     
     }
 
@@ -22,6 +23,23 @@
     @include media-down(sm){ 
         .l-grid-ponentes__item {
             flex: 0 0 100%;  /* 1 columna */
+=======
+    }
+
+    .l-grid-ponentes__item { 
+        flex: 0 0 33.333%; /* 3 columnas */
+    }
+
+    @include media-down(md){
+        .l-grid-ponentes__item {
+           flex: 0 0 50%; /* 2 columnas */
+        }
+    }
+
+    @include media-down(sm){
+        .l-grid-ponentes__item {
+            flex: 0 0 100%; /* 1 columna */
+>>>>>>> b91814c25cfa9868fab6652364eb4e53180849ba
         }
     }
 }
