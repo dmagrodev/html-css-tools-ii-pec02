@@ -72,7 +72,7 @@
     }
 
     .c-media-frame:has(.c-media-frame__image + .c-media-frame__caption) {
-        max-height: func.rem(450);
+        // max-height: func.rem(450);
         padding: 0.5rem;
         color: $white;
         background-color: $dark;
